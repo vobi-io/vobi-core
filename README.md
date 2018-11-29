@@ -19,5 +19,10 @@ let { BaseModelPlugin } = require('vobi-core')
 Inject to mongoose schema
 
 ```js
+var schema = new Schema({
+  ...
+})
+
+// Inject BaseModelPlugin to mongoose schema
 schema.plugin(BaseModelPlugin)
 ```
