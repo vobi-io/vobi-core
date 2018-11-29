@@ -1,6 +1,6 @@
 {
   "name": "vobi-core",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Vobi Core",
   "main": "./build/index.js",
   "scripts": {
@@ -26,7 +26,9 @@
     "url": "https://github.com/vobi-io/vobi-core"
   },
   "peerDependencies": {
-    "lodash": "^4.15.0"
+    "lodash": "^4.15.0",
+    "graphql-compose-mongoose": "4.0.0",
+    "ramda": "0.25.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
