@@ -1,7 +1,7 @@
-module.exports = {
-  onErrorExpress: require('./onErrorExpress'),
-  onErrorGraphql: require('./onErrorGraphql'),
-  responseDecorator: require('./responseDecorator'),
-  apiResponse: require('./apiResponse'),
-  apiErrors: require('./apiErrors')
-}
+module.exports = Object.assign(
+  require('./onErrorExpress'),
+  require('./onErrorGraphql'),
+  require('./responseDecorator'),
+  require('./apiResponse'),
+  require('./apiErrors')
+)
