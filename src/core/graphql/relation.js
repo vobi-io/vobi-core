@@ -1,44 +1,43 @@
 
-
 const addOneToOneRelation = ({
   ModelTC,
   RelationTC,
   name,
-  relPropName,
+  relPropName
 }) => {
   ModelTC.addRelation(
     name,
     {
       resolver: () => RelationTC.getResolver('findById'),
       prepareArgs: {
-        _id: source => source[relPropName || name],
+        _id: source => source[relPropName || name]
       },
       projection: {
-        [relPropName || name]: true,
-      },
+        [relPropName || name]: true
+      }
     },
-  );
-};
+  )
+}
 
 const addManyToManyRelation = ({
   ModelTC,
   RelationTC,
   name,
-  relPropName,
+  relPropName
 }) => {
   ModelTC.addRelation(
     name,
     {
       resolver: () => RelationTC.getResolver('findById'),
       prepareArgs: {
-        _id: source => source[relPropName || name],
+        _id: source => source[relPropName || name]
       },
       projection: {
-        [relPropName || name]: true,
-      },
+        [relPropName || name]: true
+      }
     },
-  );
-};
+  )
+}
 
 // const addOneToManyRelation = ({
 //   ModelTC,
@@ -62,5 +61,5 @@ const addManyToManyRelation = ({
 
 module.exports = {
   addOneToOneRelation,
-  addManyToManyRelation,
-};
+  addManyToManyRelation
+}

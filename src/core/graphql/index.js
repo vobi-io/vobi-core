@@ -4,4 +4,4 @@ module.exports = Object.assign(
   require('./crud'),
   require('./relation'),
   require('./auth'),
-);
+)

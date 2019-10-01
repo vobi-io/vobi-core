@@ -5,7 +5,7 @@
   "main": "./build/index.js",
   "scripts": {
     "build": "npm run lint && babel ./src -d ./build",
-    "lint": "eslint ./src",
+    "lint": "eslint . --quiet",
     "lint-fix": "eslint ./src --fix",
     "test": "nyc mocha --require babel-core/register",
     "lcov": "http-server ./coverage/lcov-report/",
@@ -30,8 +30,14 @@
     "ramda": "0.25.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/polyfill": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-import-graphql": "^2.7.0",
+    "eslint": "^3.15.0",
     "eslint-config-standard": "^6.2.1",
     "eslint-plugin-promise": "^3.4.1",
     "eslint-plugin-standard": "^2.0.1",

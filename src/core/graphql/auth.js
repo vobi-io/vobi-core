@@ -1,12 +1,11 @@
 
-
 const isAuthenticated = next => (rp) => {
   if (!rp.context.user) {
-    throw new Error('User not authorized');
+    throw new Error('User not authorized')
   }
-  return next(rp);
-};
+  return next(rp)
+}
 
 module.exports = {
-  isAuthenticated,
-};
+  isAuthenticated
+}
