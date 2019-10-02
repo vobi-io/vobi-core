@@ -1,6 +1,6 @@
 {
   "name": "vobi-core",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Vobi Core",
   "main": "./build/index.js",
   "scripts": {
@@ -32,22 +32,22 @@
   "devDependencies": {
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
-    "@babel/polyfill": "^7.4.3",
-    "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
     "babel-plugin-import-graphql": "^2.7.0",
-    "eslint": "4.18.2",
-    "eslint-config-standard": "^6.2.1",
-    "eslint-plugin-promise": "^3.4.1",
-    "eslint-plugin-standard": "^2.0.1",
-    "mocha": "^5.2.0",
-    "nyc": "^13.0.1"
+    "eslint": "^6.5.1",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "mocha": "^6.2.1",
+    "nyc": "^14.1.1"
   },
   "dependencies": {
     "axios": "^0.19.0",
+    "bcrypt-nodejs": "0.0.3",
     "crypto": "^1.0.1",
-    "fs": "0.0.1-security",
+    "debug": "^4.1.1",
+    "fs": "0.0.2",
     "glob": "^7.1.4",
     "mime": "^2.4.4",
     "multer": "^1.4.2",

@@ -40,8 +40,7 @@ class Utils {
   generateRandomHash () {
     var bcrypt = require('bcrypt-nodejs')
 
-    var randomText = require('crypto')
-      .randomBytes(16)
+    var randomText = crypto.randomBytes(16)
       .toString('hex')
 
     return bcrypt
