@@ -1,4 +1,3 @@
-
 const addOneToOneRelation = ({
   ModelTC,
   RelationTC,
@@ -15,7 +14,7 @@ const addOneToOneRelation = ({
       projection: {
         [relPropName || name]: true
       }
-    },
+    }
   )
 }
 
@@ -35,7 +34,7 @@ const addManyToManyRelation = ({
       projection: {
         [relPropName || name]: true
       }
-    },
+    }
   )
 }
 

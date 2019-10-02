@@ -122,7 +122,7 @@ class Utils {
           cb(null, ROOT_DIR)
         },
         filename: function(req, file, cb) {
-          crypto.pseudoRandomBytes(16, (err, raw) => {
+          crypto.randomBytes(16, (err, raw) => {
             if (err) {
               reject(err)
             }
@@ -137,7 +137,7 @@ class Utils {
           })
         }
       })
-      let upload = multer({
+      const upload = multer({
         storage: storage,
         fileFilter: function(req, file, cb) {
           switch (type) {
@@ -167,7 +167,9 @@ class Utils {
 
       upload(req, res, err => {
         if (err) return reject(err)
-        if (req.files.length === 0) return reject(`There is no files selected!`)
+        if (req.files.length === 0) {
+          return Promise.reject(new Error('There is no files selected!'))
+        }
         resolve(req.files)
       })
     })
@@ -184,7 +186,7 @@ class Utils {
       .then(result => {
         const { data } = result
         let country = ''
-        let city = ''
+        const city = ''
         if (data.results[0].address_components[6]) {
           country = data.results[0].address_components[6].long_name
         }
@@ -196,7 +198,7 @@ class Utils {
   }
 
   padToZeros (digit, pad = '000000') {
-    let str = '' + digit
+    const str = '' + digit
     return pad.substring(0, pad.length - str.length) + str
   }
 }

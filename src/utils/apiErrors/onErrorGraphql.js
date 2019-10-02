@@ -1,7 +1,6 @@
+'use strict'
 const ApiError = require('./apiError')
 const responses = require('./apiResponses')
-
-'use strict'
 
 const onErrorGraphql = err => {
   if (err.originalError instanceof ApiError && err.originalError.extra) {
