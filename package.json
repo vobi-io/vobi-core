@@ -1,6 +1,6 @@
 {
   "name": "vobi-core",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Vobi Core",
   "main": "./build/index.js",
   "scripts": {
@@ -43,5 +43,9 @@
     "eslint-plugin-standard": "^2.0.1",
     "mocha": "^5.2.0",
     "nyc": "^13.0.1"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "glob": "^7.1.4"
   }
 }
