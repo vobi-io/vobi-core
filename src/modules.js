@@ -16,7 +16,7 @@ export const capitalize = (str) => {
 
 export const getModuleName = (modulePath) => {
   const modulePathArr = modulePath.split('/')
-  return this.capitalize(modulePathArr[modulePathArr.length - 1])
+  return capitalize(modulePathArr[modulePathArr.length - 1])
 }
 
 export const modelsFromModule = (modulePath, models) => {
