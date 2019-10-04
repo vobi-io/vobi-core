@@ -22,7 +22,7 @@ export const getModuleName = (modulePath) => {
 export const modelsFromModule = (modulePath, models) => {
   try {
     const moduleName = getModuleName(modulePath).toLowerCase()
-    const defaultModelPath = `${modulePath}/${moduleName}.js`
+    const defaultModelPath = `${modulePath}/${moduleName}Model.js`
     if (fs.existsSync(defaultModelPath)) {
       const model = require(defaultModelPath)
       models.set(model.modelName, model)
