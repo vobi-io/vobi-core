@@ -1,6 +1,6 @@
 {
   "name": "vobi-core",
-  "version": "1.0.10",
+  "version": "1.0.12",
   "description": "Vobi Core",
   "main": "./build/index.js",
   "scripts": {

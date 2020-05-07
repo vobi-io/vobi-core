@@ -5,9 +5,9 @@ const ApiError = require('./apiError')
 
 const errorToResponse =
   errName =>
-    message => {
+    (message, code) => {
       const response = responses[errName]
-      const apiError = new ApiError(message, response)
+      const apiError = new ApiError(message, code, response)
       return Promise.reject(apiError)
     }
 
